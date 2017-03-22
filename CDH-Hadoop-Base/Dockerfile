@@ -7,7 +7,6 @@ RUN yum -y install epel-release java-1.8.0-openjdk-devel && rm -rf /var/cache/yu
 ENV JAVA_HOME /usr/lib/jvm/java-openjdk
 COPY cloudera-cdh.repo /etc/yum.repos.d
 RUN yum -y install hadoop supervisor &&  rm -rf /var/cache/yum/* && yum clean all
-RUN yum -y install httpd && yum clean all
 ENV CDH_VER 5.10
 COPY conf.d/* /usr/lib/hadoop/etc/hadoop/
 ENV HADOOP_HOME /usr/lib/hadoop
