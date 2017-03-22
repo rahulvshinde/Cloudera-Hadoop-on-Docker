@@ -1,1 +1,0 @@
-# Cloudera-Hadoop-on-Docker
