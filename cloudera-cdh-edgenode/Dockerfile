@@ -4,7 +4,7 @@
 # It also contains some pig/hive script and CSV test files to start with
 #
 #########################################################################################
-FROM rshinde26/cloudera-cdh:cdh-5.9.0
+FROM rshinde26/cloudera-cdh
 
 MAINTAINER Rahul Shinde <r.shinde2007@gmail.com>
 

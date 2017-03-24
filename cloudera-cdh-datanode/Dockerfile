@@ -5,7 +5,7 @@
 # (using rshinde26/cloudera-hdfs-namenode) and make sure the netword stack is OK so that the namenode and datanode
 # can communicate together
 #######################################################################################################################
-FROM rshinde26/cloudera-cdh:cdh-5.9.0
+FROM rshinde26/cloudera-cdh
 
 MAINTAINER Rahul Shinde <r.shinde2007@gmail.com>
 
