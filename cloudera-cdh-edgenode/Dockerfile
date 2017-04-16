@@ -16,11 +16,19 @@ RUN mkdir /dataset
 RUN mkdir /dataset/small_files
 RUN mkdir /dataset/script
 RUN mkdir /WordCount
+RUN mkdir /WordCount/build
+RUN mkdir /WordCount/build/org
+RUN mkdir /WordCount/build/org/myorg
+
 
 COPY split.py /dataset/script
 COPY dataset.xml /dataset
 
-COPY WordCount/* /WordCount/
+COPY Makefile /WordCount/
+COPY stop_words.text /WordCount/
+COPY wourdcount.jar /WordCount/
+COPY WordCount.java /WordCount/
+COPY *.class /WordCount/build/org/myorg/
 
 #copy test data and script
 COPY cities.* /
