@@ -20,7 +20,7 @@ RUN mkdir /WordCount
 COPY split.py /dataset/script
 COPY dataset.xml /dataset
 
-COPY WordCount/* /WordCount
+COPY WordCount/* /WordCount/
 
 #copy test data and script
 COPY cities.* /
