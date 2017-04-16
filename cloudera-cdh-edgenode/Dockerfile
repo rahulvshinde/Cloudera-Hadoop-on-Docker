@@ -26,7 +26,7 @@ COPY dataset.xml /dataset
 
 COPY Makefile /WordCount/
 COPY stop_words.text /WordCount/
-COPY wourdcount.jar /WordCount/
+COPY wordcount.jar /WordCount/
 COPY WordCount.java /WordCount/
 COPY *.class /WordCount/build/org/myorg/
 
