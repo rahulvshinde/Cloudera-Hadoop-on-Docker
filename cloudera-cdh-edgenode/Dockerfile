@@ -9,7 +9,15 @@ FROM rshinde26/cloudera-cdh
 MAINTAINER Rahul Shinde <r.shinde2007@gmail.com>
 
 #install pig, hive, flume and scoop 
-RUN yum -y install pig hive flume-ng sqoop2 spark-worker && rm -rf /var/cache/yum/*
+RUN yum -y install wget vim pig hive flume-ng sqoop2 spark-worker && rm -rf /var/cache/yum/*
+
+#copy project files
+RUN mkdir /dataset
+RUN mkdir /dataset/small_files
+RUN mkdir /dataset/script
+
+COPY split.py /dataset/script
+COPY dataset.xml /dataset
 
 #copy test data and script
 COPY cities.* /
