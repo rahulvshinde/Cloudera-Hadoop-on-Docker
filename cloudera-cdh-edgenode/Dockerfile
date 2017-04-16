@@ -15,9 +15,12 @@ RUN yum -y install wget vim pig hive flume-ng sqoop2 spark-worker && rm -rf /var
 RUN mkdir /dataset
 RUN mkdir /dataset/small_files
 RUN mkdir /dataset/script
+RUN mkdir /WordCount
 
 COPY split.py /dataset/script
 COPY dataset.xml /dataset
+
+COPY WordCount/* /WordCount
 
 #copy test data and script
 COPY cities.* /
